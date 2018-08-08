@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../plugin/dashboard.css">
+    <link rel="stylesheet" href="../../plugin/universal.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="page">
+    <div class="page-single">
+        <div class="container">
+            <div class="row">
+                <div class="col col-login mx-auto">
+                    <div class="card">
+                        <div class="card-body p-6">
+                            <form action="/user/login" method="post">
+                                <div class="card-title">用户登录 / User Login</div>
+                                <hr>
+                                <div class="form-group">
+                                    <input class="form-control" id="username" name="username" aria-describedby="emailHelp"
+                                           placeholder="请输入用户名">
+                                    <img src="../../img/19.png">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+                                    <img src="../../img/18.png">
+                                </div>
+                                <div id="verifyCode">
+                                    <input class="form-control" name="imageCode" placeholder="请输入验证码">
+                                    <img src="/code/image" alt="验证码">
+                                </div>
+                                <div class="form-footer">
+                                    <button id="button-login" class="btn btn-primary btn-block">登录
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../plugin/md5-2.10.0.js"></script>
+<script src="../../plugin/axios.js"></script>
+<!--<script src="../../plugin/jquery.js"></script>-->
+<script src="../url.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

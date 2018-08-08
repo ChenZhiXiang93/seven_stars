@@ -1,0 +1,13 @@
+#spring:
+#  datasource:
+#    url:  jdbc:mysql://localhost:3306/db_qxg?characterEncoding=UTF-8
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: jayczx120
+spring:
+  datasource:
+    url: jdbc:oracle:thin:localhost:1521:ORCL
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: cmkt
+    password: bonc_cmkt
+

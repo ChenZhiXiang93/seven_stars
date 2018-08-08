@@ -1,0 +1,189 @@
+@charset "UTF-8";
+nav {
+  background-color: #19244B;
+  opacity: 0.9;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  color: #5CACE5; }
+  nav > span:first-child {
+    display: flex;
+    align-items: center; }
+    nav > span:first-child > span:first-child {
+      margin: 0 3rem 0 0;
+      font-size: 1.3rem; }
+      nav > span:first-child > span:first-child > img {
+        width: 2rem;
+        height: 2rem; }
+  nav > span:last-child > span {
+    margin: 0 1rem;
+    cursor: pointer; }
+  nav select {
+    background-color: #273864;
+    border-color: #273864;
+    color: white; }
+  nav .nav-title {
+    vertical-align: middle; }
+  nav img {
+    margin-right: 0.2rem; }
+
+body > div {
+  height: 93%;
+  display: flex;
+  background: url(../../img/u0.png);
+  background-size: 100% 100%; }
+  body > div > span:first-child {
+    flex: 27;
+    display: flex;
+    flex-direction: column; }
+    body > div > span:first-child > div:first-child {
+      flex: 27; }
+    body > div > span:first-child > div:nth-child(2) {
+      flex: 46; }
+    body > div > span:first-child > div:last-child {
+      flex: 27; }
+  body > div > span:nth-child(2) {
+    flex: 1; }
+  body > div > span:nth-child(3) {
+    flex: 44;
+    display: flex;
+    flex-direction: column; }
+    body > div > span:nth-child(3) > div:first-child {
+      flex: 75; }
+    body > div > span:nth-child(3) > div:last-child {
+      flex: 25; }
+  body > div > span:nth-child(4) {
+    flex: 1; }
+  body > div > span:last-child {
+    flex: 27;
+    display: flex;
+    flex-direction: column; }
+    body > div > span:last-child > div:first-child {
+      flex: 25; }
+    body > div > span:last-child > div:nth-child(2) {
+      flex: 25; }
+    body > div > span:last-child > div:nth-child(3) {
+      flex: 25; }
+    body > div > span:last-child > div:last-child {
+      flex: 25; }
+
+.chart-title {
+  height: 10%;
+  position: relative;
+  padding-left: 1rem;
+  color: white; }
+
+.chart {
+  height: 90%; }
+
+#juzhudi, #bangongdi {
+  height: 45%;
+  padding-left: 15px; }
+
+.u255_div {
+  position: absolute;
+  left: 0.4rem;
+  top: 0.2rem;
+  width: 4px;
+  height: 20px;
+  background: inherit;
+  background-color: #54b3f9;
+  border-radius: 2px;
+  box-shadow: none; }
+
+#realTimeProple {
+  padding-left: 16px; }
+
+#realTimeProple li {
+  /*float: left;
+  list-style-type:none;*/
+  width: 55px;
+  height: 90px;
+  display: inline-block;
+  line-height: 90px;
+  list-style: none;
+  /* border: 1px solid #DDDDDD; */
+  background: -webkit-linear-gradient(top, #02A2FA, #02A2FA);
+  background: -o-linear-gradient(top, #02A2FA, #02A2FA);
+  background: -moz-linear-gradient(top, #02A2FA, #02A2FA);
+  background: -ms-linear-gradient(top, #02A2FA, #02A2FA);
+  vertical-align: middle;
+  color: #fff;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 7px; }
+
+.point {
+  background: none !important; }
+
+.unit {
+  float: left;
+  padding-top: 97px;
+  padding-left: 15px;
+  font-size: 23px;
+  color: #CDCAE5; }
+
+table {
+  width: 90%; }
+
+table td {
+  border: 1px solid #2E4672;
+  text-align: center;
+  line-height: 34px;
+  font-family: "Microsoft YaHei"; }
+
+thead {
+  background-color: #172F5D;
+  line-height: 42px;
+  text-align: center; }
+
+thead td {
+  text-align: center;
+  color: #8FBEE8;
+  font-size: 16px; }
+
+tbody td {
+  color: #7A96C8;
+  font-size: 12px; }
+
+#bangongdi {
+  margin-top: 5px; }
+
+td img {
+  padding-left: 6px; }
+
+#zhiye {
+  position: relative; }
+
+#txt span {
+  width: 80px !important;
+  height: 80px !important;
+  line-height: 80px;
+  text-align: center;
+  background: url(../../img/redcirle.png) no-repeat 0 0/100% 100%;
+  cursor: pointer; }
+
+#txt span:last-child {
+  display: none !important; }
+
+.right {
+  padding-left: 16px; }
+
+#title {
+  position: absolute;
+  top: 3%;
+  width: 30rem;
+  left: calc(50% - 15rem);
+  color: white;
+  z-index: 1;
+  font-size: 2rem;
+  text-align: center; }
+
+#title:after {
+  content: "商圈总览图"; }
+
+/*# sourceMappingURL=business-district.css.map */

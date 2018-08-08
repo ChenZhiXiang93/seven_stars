@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../plugin/bootstrap.css">
+    <link rel="stylesheet" href="../../plugin/universal.css">
+    <link rel="stylesheet" href="business-district.css">
+</head>
+<body>
+<span id="title"></span>
+<nav>
+    <span>
+        <span>
+            <img src="../../img/u4.png"><span class="nav-title">商圈智慧+</span>
+        </span>
+        <span>
+            <select  id="shangquanLiebiao" @change="changeSelect">
+                <option v-for="v of list" v-text="v[1]" :value="v[0]"></option>
+            </select>
+        </span>
+    </span>
+
+    <span>
+        <span>
+            <img src="../../img/u9.png"><span class="nav-title">账户设置</span>
+        </span>
+        <span onclick="logout()">
+            <img src="../../img/u8.png"><span class="nav-title">退出登录</span>
+        </span>
+        <span>
+            <img src="../../img/u7.png"><span class="nav-title">返回</span>
+        </span>
+    </span>
+</nav>
+<div>
+<span>
+    <div>
+        <div class="chart-title">实时人流</div>
+        <div id="realTimeProple" style="float: left;padding-top: 50px"></div>
+        <div style="float: left" class="unit">万人</div>
+    </div>
+    <div id="ranking">
+        <div class="chart-title">访客来源常住地排名</div>
+        <div id="juzhudi">
+            <table>
+                <thead>
+                    <td>居住地</td>
+                    <td>到访人数</td>
+                    <td>变化趋势</td>
+                </thead>
+                <tbody>
+                    <tr v-for="val in officeSpace">
+                        <td>{{val.place}}</td>
+                        <td>{{val.population}}</td>
+                        <td>{{val.changes}}<img :src="val.trends==0?'../../img/u53.png':'../../img/u54.png'"/></td>
+                    </tr>
+                    <!--<tr>
+                        <td>金阳红街</td>
+                        <td>1256</td>
+                        <td>34<img src="../../img/u54.png"/></td>
+                    </tr>
+                    <tr>
+                        <td>阅山湖</td>
+                        <td>958</td>
+                        <td>50<img src="../../img/u53.png"/></td>
+                    </tr>
+                    <tr>
+                        <td>阅山湖</td>
+                        <td>958</td>
+                        <td>50<img src="../../img/u53.png"/></td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+        <div id="bangongdi">
+            <table>
+                <thead>
+                    <td>办公地</td>
+                    <td>到访人数</td>
+                    <td>变化趋势</td>
+                </thead>
+                <tbody>
+                     <tr v-for="val in officeSpace">
+                        <td>{{val.place}}</td>
+                        <td>{{val.population}}</td>
+                        <td>{{val.changes}}<img :src="val.trends==0?'../../img/u53.png':'../../img/u54.png'"/></td>
+                    </tr>
+                   <!-- <tr>
+                        <td>麒龙CBD</td>
+                        <td>1256</td>
+                        <td>34<img src="../../img/u54.png"/></td>
+                    </tr>
+                    <tr>
+                        <td>移动枢纽大楼</td>
+                        <td>958</td>
+                        <td>10<img src="../../img/u53.png"/></td>
+                    </tr>
+                    <tr>
+                        <td>麒龙CBD</td>
+                        <td>958</td>
+                        <td>24<img src="../../img/u54.png"/></td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <div class="chart-title">各楼层访客分析</div>
+        <div class="chart" id="floorVisitorsData"></div>
+    </div>
+</span>
+<span></span>
+<span>
+    <div>
+        <div class="chart-title"><span class="u255_div"></span>访客热力图</div>
+        <div id="heatmap" class="chart"></div>
+    </div>
+    <div class="historyVisitor">
+        <div class="chart-title title"><span class="u255_div"></span>历史访客分析</div>
+        <div class="chart" id="historyVisitor"></div>
+    </div>
+</span>
+<span></span>
+<span>
+    <div class="right">
+        <div class="chart-title"><span class="u255_div"></span>访客统计</div>
+        <div class="chart" id="visitorStatistics" style="text-align: center"></div>
+    </div>
+    <div class="right">
+        <div class="chart-title"><span class="u255_div"></span>访客画像</div>
+        <div class="chart" id="visitorPortrait"></div>
+    </div>
+    <div class="right">
+        <div class="chart-title"><span class="u255_div"></span>访客标签</div>
+        <div class="chart" id="visitorLabel"></div>
+    </div>
+    <div class="right">
+        <div class="chart-title"><span class="u255_div"></span>访客职业</div>
+        <div id="zhiye" class="chart"></div>
+    </div>
+</span>
+</div>
+
+<script src="https://webapi.amap.com/maps?v=1.4.8&key=c365db6b159687edff9ea558b4c72845"></script>
+<script src="../../plugin/axios.js"></script>
+<script src="../../plugin/vue.js"></script>
+<script src="../../plugin/jquery.js"></script>
+<script src="../../plugin/bootstrap.js"></script>
+<script src="../../plugin/echarts.js"></script>
+<script src="chartData.js"></script>
+<script src="visitorsResourceRanking.js"></script>
+<script src="../../plugin/axios.js"></script>
+<script src="../../plugin/lodash.js"></script>
+
+<script src="../url.js"></script>
+<script src="businessData.js"></script>
+<script src="heatmap.js"></script>
+<script src="scatter.js"></script>
+<script src="business-district.js"></script>
+</body>
+</html>
